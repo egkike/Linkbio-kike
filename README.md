@@ -32,13 +32,16 @@ npm install @midudev/tailwind-animations
 ```
 
 ### Paso 2: Crear un archivo .vscode/settings.json y asociar Tailwind con archivos de tipo css:
+```bash
 {
   "files.associations": {
     "*.css": "tailwindcss"
   }
 }
+```
 
 ### Paso 3: Modificar el archivo vite.config.ts y agregar esto:
+```bash
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import tailwindcss from "@tailwindcss/vite";
@@ -46,20 +49,29 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   plugins: [react(), tailwindcss()],
 });
+```
 
 ### Paso 4: Para compilar a un archivo css que podamos importar:
 1- Crear el archivo input.css con los import y librerias de Tailwind a utilizar.
 
 2- Agregar este scrip en package.json:
+```bash
 "build:styles": "npx @tailwindcss/cli -i ./input.css -o ./src/styles/output.css"
+```
 
 3- Ejecutar el scrip para compilar y generar el archivo output.css:
+```bash
 npm run build:styles
+```
 
 4- Ejecutar la app en ambiente de desarrollo:
+```bash
 npm run dev
+```
 
 5- Compila y construye la app en la carpeta dist:
+```bash
 npm run build
+```
 
 6- Utiliza la carpeta dist para hacer el Deploy en el sitio de preferencia.
