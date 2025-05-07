@@ -1,0 +1,127 @@
+@import "tailwindcss";
+@plugin "@midudev/tailwind-animations"; /* Importar plugin de animaciones de MiduDev */
+
+/* Importar fuente Inter para del archivo inter.woff2 */
+@font-face {
+  font-family: 'Inter';
+  src: url('/src/assets/inter.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: swap;
+}
+
+/* Colores para el proyecto vite-react-ts */
+@theme {
+  --color-primary: #0fbcf9;
+  --color-primary-light: #ceecff;
+  --color-primary-dark: rgb(0, 22, 83);
+  --color-html: #E44D26;
+  --facebook-blue: #1877f2;
+  --linkedin-blue: #0A66C2;
+  --youtube-red: #FF0000;
+  --instagram-yellow: #FEDA75;
+  --instagram-orange: #F58529;
+  --instagram-purple: #C13584;
+
+  --dark-1: #171717;
+  --dark-2: #1e1e1e;
+  --dark-3: #242424;
+  --dark-4: #3a3a3a;
+  --dark-5: #333;
+  --dark-6: #444;
+  --light-border: #ccc;
+
+  --background: #f5f5f5;
+  --text-dark: #000;
+  --sidebar: #1877f2;
+  --sidebar-hover: #3889f3;
+  --error: red;
+  --gray: #8a8383;
+
+  --success: #10b981;
+  --warning: #f59e0b;
+  --info: #3b82f6;
+
+  --font-display: "Inter", system-ui, sans-serif, "Avenir", Helvetica, Arial;
+
+  --fontWeight: { normal: 400, semibold: 600, bold: 700 };
+
+  --breakpoint-sm: 640px; /* Added new breakpoint for small screens */
+}
+
+@layer base {
+  :root {
+    background: linear-gradient(to bottom, #000000, #0c4a6e, #1f2937);
+  }
+}
+
+/* Animaciones personalizadas */
+@layer utilities {
+  @keyframes slide-up-fade {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pulse-fade-in {
+    0% {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slide-up-fade {
+    animation: slide-up-fade 0.5s ease-out forwards;
+  }
+
+  .animate-pulse-fade-in {
+    animation: pulse-fade-in 1s ease-in-out;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-in-out;
+  }
+
+  /* Clases de máscara radial */
+  .mask-radial {
+    mask-image: radial-gradient(circle at center, black 45%, transparent 80%);
+    -webkit-mask-image: radial-gradient(circle at center, black 45%, transparent 80%);
+  }
+
+  /* Clases de animación con retraso */
+  .animate-delay-0 { animation-delay: 0ms; }
+  .animate-delay-100 { animation-delay: 100ms; }
+  .animate-delay-200 { animation-delay: 200ms; }
+  .animate-delay-300 { animation-delay: 300ms; }
+  .animate-delay-400 { animation-delay: 400ms; }
+  .animate-delay-500 { animation-delay: 500ms; }
+}
+
+/* Clases de botones sociales */
+.social-button {
+  @apply p-2 size-10 sm:size-12 flex items-center justify-center rounded-full hover:scale-110 transition-transform text-black;
+}
