@@ -116,7 +116,7 @@ const LinkBioPage: React.FC = () => {
           <use href={`${SPRITE_PATH}#github`} />
         </svg>
       ),
-      className: "bg-dark-2",
+      className: "bg-gradient-to-tr from-blue-500 to-blue-700",
       delay: "",
     },
     {
@@ -124,7 +124,7 @@ const LinkBioPage: React.FC = () => {
       title: "Financial-Tools",
       url: validateUrl("https://egkike.github.io/Landing-Kike/financial-tools"),
       icon: <FaCalculator size={24} />,
-      className: "bg-success",
+      className: "bg-gradient-to-tr from-blue-500 to-blue-700",
       delay: "animate-delay-100",
     },
     {
