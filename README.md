@@ -4,7 +4,7 @@ Utiliza el archivo /public/assets/sprite.svg y la librería react-icons para mos
 Importa fuente Inter del archivo /src/assets/inter.woff2.
 
 ### Puedes ver funcionando la app en el siguiente link:
-https://kikegarcia-link-bio.netlify.app/
+https://kikegarcia-linkbio.netlify.app/
 
 
 ## Pasos realizados para crear y configurar el proyecto:
