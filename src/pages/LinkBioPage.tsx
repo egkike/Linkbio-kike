@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FaCalculator } from "react-icons/fa6";
+import { FaCalculator, FaEarthAmericas } from "react-icons/fa6";
 import FotoKike from "../assets/Foto-Kike.webp";
 
 interface PersonalInfo {
@@ -109,7 +109,7 @@ const LinkBioPage: React.FC = () => {
   const links: LinkItem[] = [
     {
       section: "projects",
-      title: "GitHub - Projects",
+      title: "GitHub - Proyectos",
       url: validateUrl("https://github.com/egkike"),
       icon: (
         <svg className="size-6 fill-current">
@@ -118,6 +118,14 @@ const LinkBioPage: React.FC = () => {
       ),
       className: "bg-gradient-to-tr from-blue-500 to-blue-700",
       delay: "",
+    },
+    {
+      section: "projects",
+      title: "GarciaHnos - Negocios",
+      url: validateUrl("https://egkike.github.io/GarciaHnos-HP/"),
+      icon: <FaEarthAmericas size={24} />,
+      className: "bg-gradient-to-tr from-blue-500 to-blue-700",
+      delay: "animate-delay-100",
     },
     {
       section: "projects",
